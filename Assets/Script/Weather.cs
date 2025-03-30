@@ -71,14 +71,14 @@ public class ChangeWeather : MonoBehaviour
                 Debug.Log(Hour);
                 int hour = int.Parse(hourAndminute[0]); 
 
-                if (hour >= 7 && hour <= 18) 
+                if (hour >= 6 && hour <= 18) 
                 {
-                    skyColour.color = new Color32(21, 204, 240, 100);
+                    skyColour.color = new Color32(181, 247, 255, 170);
                     Debug.Log("DayTime");
                 }
                 else 
                 {
-                    skyColour.color = new Color32(10, 10, 50, 100);
+                    skyColour.color = new Color32(0, 47, 105, 150);
                     Debug.Log("NightTime");
                 }
             }
