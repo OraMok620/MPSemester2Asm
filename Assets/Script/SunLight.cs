@@ -4,10 +4,11 @@ using UnityEngine;
 using SimpleJSON;
 using UnityEngine.Networking;
 
-public class Cloud1 : MonoBehaviour
+public class SunLight : MonoBehaviour
 {
-    public string DataURL;
-    public GameObject over70cloud;
+    public string DataURL; //GetData
+    public Light sunLight;//GetLight
+    public GameObject sun;//GetSun
     
 
     // Start is called before the first frame update
@@ -39,17 +40,20 @@ public class Cloud1 : MonoBehaviour
     {
         JSONNode node = JSON.Parse(jsonString);
         JSONObject obj = node.AsObject;
+        
+        int isDay = node["current"]["is_day"].AsInt; // Change is_day value into integer
 
-        Debug.Log(obj["current"]["cloud_cover"].Value);
-        int NumOfCloud = int.Parse(obj["current"]["cloud_cover"].Value);
-        if (NumOfCloud >= 70)
+        if (isDay == 1)
         {
-            over70cloud.SetActive(true);
-            Debug.Log("CloudCoverOver70");
-        } else {
-            over70cloud.SetActive(false);
-            Debug.Log("CloudCoverLower70");
+            sunLight.enabled = true;  // Sun come out
+            sun.SetActive(true);
+            Debug.Log("DayTime");
+        }
+        else
+        {
+            sunLight.enabled = false; // Bye Sun
+            sun.SetActive(false);
+            Debug.Log("NightTime");
         }
     }
 }
-

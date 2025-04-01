@@ -6,8 +6,8 @@ using UnityEngine.Networking;
 
 public class sky_change : MonoBehaviour
 {
-    public string DataURL;
-    public Material targetMaterial;
+    public string DataURL; //GetData
+    public Material targetMaterial; //Get Material
     
 
     // Start is called before the first frame update
@@ -39,35 +39,28 @@ public class sky_change : MonoBehaviour
     {
         JSONNode node = JSON.Parse(jsonString);
         JSONObject obj = node.AsObject;
-        Debug.Log(obj["current"]["time"].Value);
-        string timeValue = obj["current"]["time"].Value; 
-        string[] dateAndtime = timeValue.Split('T'); 
-        if (dateAndtime.Length > 1)
-        {   
-            //notes[2025-03-11]=0/T/[12:30]=1
-            string Today = dateAndtime[0]; 
-            string CurrentTime = dateAndtime[1]; 
-            string hourValue = CurrentTime; 
-            string[] hourAndminute = hourValue.Split(':');
-            //notes[12]=0/:/[45]=1
-            if (hourAndminute.Length > 1)
-            {
-                string Hour = hourAndminute[0];
-                Debug.Log(Hour);
-                int hour = int.Parse(hourAndminute[0]); 
 
-                if (hour >= 6 && hour <= 18) 
-                {
-                    Debug.Log("DayTime");
-                    targetMaterial.color = new Color32(181, 247, 255, 255);
-                }
-                else 
-                {
-                    Debug.Log("NightTime");
-                    targetMaterial.color = new Color32(0, 47, 105, 255);
-                }
-            }
+        Debug.Log(obj["current"]["is_day"].Value);//Check is_day value
+        int isDay = node["current"]["is_day"].AsInt; // Change is_day value into integer
+        Debug.Log(obj["current"]["showers"].Value);//Check can I get showers value
+        int RainAmount = node["current"]["showers"].AsInt; //Put value into integer
+
+        if (isDay == 1)
+        {
+            Debug.Log("DayTime");
+            targetMaterial.color = new Color32(97, 189, 252, 255);
         }
+        else
+        {
+            Debug.Log("NightTime");
+            targetMaterial.color = new Color32(0, 23, 50, 255);
+        }
+        if (isDay == 1 && RainAmount > 0) 
+        {
+            Debug.Log("IsRaining");
+            targetMaterial.color = new Color32(160, 160, 160, 255);
+        }
+        
     }
 }
 
