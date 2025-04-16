@@ -47,10 +47,10 @@ public class RainSystem : MonoBehaviour
 
         if(RainAmount > 5)
         {
-            heavyRain.SetActive(false);
+            heavyRain.SetActive(true);
             Debug.Log("HeavyRainNow");//Check if the if statement work by call the message in console
         } else{
-            heavyRain.SetActive(true);
+            heavyRain.SetActive(false);
             Debug.Log("NotHeavyRain");//Check if the if statement work by call the message in console
         }
         if(RainAmount >= 2 && RainAmount < 5)
