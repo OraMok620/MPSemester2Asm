@@ -47,8 +47,10 @@ public class Cloud : MonoBehaviour
 
         Debug.Log(obj["current"]["cloud_cover"].Value);//Check can I get cloud cover value
         int NumOfCloud = int.Parse(obj["current"]["cloud_cover"].Value);//Set the value to integer
-        Debug.Log(obj["current"]["showers"].Value);//Check can I get showers value
-        int RainAmount = node["current"]["showers"].AsInt; //Put value into integer
+        Debug.Log(obj["current"]["rain"].Value);//Check can I get showers value
+        int RainAmount = node["current"]["rain"].AsInt; //Put value into integer
+        Debug.Log(obj["current"]["weather_code"].Value);//Check can I get weather code
+        int currentWeatherCode = node["current"]["weather_code"].AsInt; //Put value into integer
 
         if (NumOfCloud >= 75) //If cloud cover over 75 than call out the object, otherwise, won't appear
         {
@@ -81,6 +83,14 @@ public class Cloud : MonoBehaviour
             targetMaterial2.color = new Color32(220, 220, 220, 255);
             targetMaterial3.color = new Color32(220, 220, 220, 255);
         }
+        
+        if(currentWeatherCode >= 28 && currentWeatherCode < 31 )
+        {
+            targetMaterial1.color = new Color32(220, 220, 220, 255); //Change clouds color from white to grey
+            targetMaterial2.color = new Color32(220, 220, 220, 255);
+            targetMaterial3.color = new Color32(220, 220, 220, 255);
+            Debug.Log("ThunderNow");//Check if the if statement work by call the message in console
+        } 
     }
 }
 

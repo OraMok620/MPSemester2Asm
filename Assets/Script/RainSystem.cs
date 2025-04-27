@@ -42,10 +42,10 @@ public class RainSystem : MonoBehaviour
         JSONNode node = JSON.Parse(jsonString);
         JSONObject obj = node.AsObject;
 
-        Debug.Log(obj["current"]["showers"].Value);//Check can I get showers value
-        int RainAmount = node["current"]["showers"].AsInt; //Put value into integer
+        Debug.Log(obj["current"]["rain"].Value);//Check can I get showers value
+        int RainAmount = node["current"]["rain"].AsInt; //Put value into integer
 
-        if(RainAmount > 5)
+        if(RainAmount >= 4)
         {
             heavyRain.SetActive(true);
             Debug.Log("HeavyRainNow");//Check if the if statement work by call the message in console
@@ -53,7 +53,7 @@ public class RainSystem : MonoBehaviour
             heavyRain.SetActive(false);
             Debug.Log("NotHeavyRain");//Check if the if statement work by call the message in console
         }
-        if(RainAmount >= 2 && RainAmount < 5)
+        if(RainAmount >= 0.5 && RainAmount < 4)
         {
             rain.SetActive(true);
             Debug.Log("RainNow");//Check if the if statement work by call the message in console
@@ -61,7 +61,7 @@ public class RainSystem : MonoBehaviour
             rain.SetActive(false);
             Debug.Log("NotRain");//Check if the if statement work by call the message in console
         }
-        if(RainAmount > 0 && RainAmount < 2)
+        if(RainAmount > 0 && RainAmount < 0.5)
         {
             lightRain.SetActive(true);
             Debug.Log("LightRainNow");//Check if the if statement work by call the message in console
