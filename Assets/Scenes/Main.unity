@@ -218,7 +218,7 @@ RectTransform:
   - {fileID: 695547702}
   - {fileID: 1427352354}
   - {fileID: 1275435219}
-  m_Father: {fileID: 1045615914}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1238,9 +1238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3607947770817472916}
   - {fileID: 601105813}
-  - {fileID: 302141356}
   m_Father: {fileID: 772980680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168354559
@@ -3142,7 +3140,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1045615914}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6036614429216266061, guid: 9fe9515da7a713745a3b0d6f1f875cc1,
         type: 3}
@@ -3199,17 +3197,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
+    - target: {fileID: 6960033868455690880, guid: 9fe9515da7a713745a3b0d6f1f875cc1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fe9515da7a713745a3b0d6f1f875cc1, type: 3}
---- !u!4 &3607947770817472916 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6036614429216266061, guid: 9fe9515da7a713745a3b0d6f1f875cc1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3607947770817472915}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3218,6 +3215,8 @@ SceneRoots:
   - {fileID: 1838387886}
   - {fileID: 755003316}
   - {fileID: 1975478998}
+  - {fileID: 3607947770817472915}
+  - {fileID: 302141356}
   - {fileID: 1443654581}
   - {fileID: 1228227331}
   - {fileID: 912396147}
