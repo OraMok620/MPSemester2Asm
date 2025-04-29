@@ -57,12 +57,12 @@ public class Cloud : MonoBehaviour
             over75cloud.SetActive(true);
             Debug.Log("CloudCoverOver75");//Check if the if statement work by call the message in console
         } else {
-            over75cloud.SetActive(false);
+            over75cloud.SetActive(true);
             Debug.Log("CloudCoverLower75");
         }
         if (NumOfCloud >= 25 && NumOfCloud < 75)
         {
-            over25cloud.SetActive(true);
+            over25cloud.SetActive(false);
             Debug.Log("CloudCoverOver25");//Check if the if statement work by call the message in console
         } else {
             over25cloud.SetActive(false);
@@ -70,7 +70,7 @@ public class Cloud : MonoBehaviour
         }
         if (NumOfCloud > 0 && NumOfCloud < 25)
         {
-            over0cloud.SetActive(true);
+            over0cloud.SetActive(false);
             Debug.Log("CloudCoverOver0");//Check if the if statement work by call the message in console
         } else {
             over0cloud.SetActive(false);

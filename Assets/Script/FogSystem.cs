@@ -40,11 +40,10 @@ public class FogSystem : MonoBehaviour
         JSONNode node = JSON.Parse(jsonString);
         JSONObject obj = node.AsObject;
 
-        Debug.Log(obj["current"]["relative_humidity_2m"].Value);//Check can I get current humidity
-        float humidity = node["current"]["relative_humidity_2m"].AsFloat;; //get percentage
-        Debug.Log("Humidity: " + humidity); //check can I get humidity from float
+        Debug.Log(obj["current"]["weather_code"].Value);//Check can I get weather code
+        int currentWeatherCode = node["current"]["weather_code"].AsInt; //Put value into integer
 
-        if (humidity >= 95f)
+        if (currentWeatherCode >= 40 && currentWeatherCode <= 49)
         {
             Fog.SetActive(true); //if humidity larger than 95% there are fog
             Debug.Log("High humidity"); //put to console to check is the code work

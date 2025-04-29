@@ -43,7 +43,7 @@ public class ThunderSystem : MonoBehaviour
         Debug.Log(obj["current"]["weather_code"].Value);//Check can I get weather code
         int currentWeatherCode = node["current"]["weather_code"].AsInt; //Put value into integer
 
-        if(currentWeatherCode >= 28 && currentWeatherCode < 31 )
+        if(currentWeatherCode == 17 || currentWeatherCode == 29 || currentWeatherCode >= 95)
         {
             Thunder.SetActive(true);
             Debug.Log("ThunderNow");//Check if the if statement work by call the message in console
