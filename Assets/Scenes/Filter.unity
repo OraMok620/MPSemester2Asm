@@ -706,7 +706,7 @@ PrefabInstance:
     - target: {fileID: 7418785398096508320, guid: b02124e8e232d8d43a8abc4f4c007f47,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1300,7 +1300,7 @@ PrefabInstance:
     - target: {fileID: 1843965949138234834, guid: 9034240f66a1cb745a9173e3eb165468,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1562,7 +1562,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 601105813}
-  - {fileID: 1249281720}
   m_Father: {fileID: 772980680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1249281716
@@ -1666,7 +1665,7 @@ RectTransform:
   - {fileID: 210164277}
   - {fileID: 1774004961}
   - {fileID: 755744489}
-  m_Father: {fileID: 1045615914}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2012,7 +2011,7 @@ PrefabInstance:
     - target: {fileID: 836292235295207866, guid: f9d562a536143d14ba798bf2db977692,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3170321319582364481, guid: f9d562a536143d14ba798bf2db977692,
         type: 3}
@@ -3238,6 +3237,7 @@ SceneRoots:
   - {fileID: 1838387886}
   - {fileID: 1408637907}
   - {fileID: 605545462}
+  - {fileID: 1249281720}
   - {fileID: 451648445}
   - {fileID: 759690255}
   - {fileID: 1431999742}
