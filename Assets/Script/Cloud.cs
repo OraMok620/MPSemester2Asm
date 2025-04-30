@@ -57,12 +57,12 @@ public class Cloud : MonoBehaviour
             over75cloud.SetActive(true);
             Debug.Log("CloudCoverOver75");//Check if the if statement work by call the message in console
         } else {
-            over75cloud.SetActive(true);
+            over75cloud.SetActive(false);
             Debug.Log("CloudCoverLower75");
         }
         if (NumOfCloud >= 25 && NumOfCloud < 75)
         {
-            over25cloud.SetActive(false);
+            over25cloud.SetActive(true);
             Debug.Log("CloudCoverOver25");//Check if the if statement work by call the message in console
         } else {
             over25cloud.SetActive(false);
@@ -70,13 +70,13 @@ public class Cloud : MonoBehaviour
         }
         if (NumOfCloud > 0 && NumOfCloud < 25)
         {
-            over0cloud.SetActive(false);
+            over0cloud.SetActive(true);
             Debug.Log("CloudCoverOver0");//Check if the if statement work by call the message in console
         } else {
             over0cloud.SetActive(false);
             Debug.Log("NoCloudORLarger25");
         }
-        if (RainAmount > 0)
+        if (RainAmount == 0)
         {
             Debug.Log("IsRaining");
             targetMaterial1.color = new Color32(220, 220, 220, 255); //Change clouds color from white to grey
