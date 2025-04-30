@@ -50,12 +50,12 @@ public class RainSystem : MonoBehaviour
             heavyRain.SetActive(true);
             Debug.Log("HeavyRainNow");//Check if the if statement work by call the message in console
         } else{
-            heavyRain.SetActive(true);
+            heavyRain.SetActive(false);
             Debug.Log("NotHeavyRain");//Check if the if statement work by call the message in console
         }
         if(RainAmount >= 0.5 && RainAmount < 4)
         {
-            rain.SetActive(false);
+            rain.SetActive(true);
             Debug.Log("RainNow");//Check if the if statement work by call the message in console
         } else{
             rain.SetActive(false);
@@ -63,7 +63,7 @@ public class RainSystem : MonoBehaviour
         }
         if(RainAmount > 0 && RainAmount < 0.5)
         {
-            lightRain.SetActive(false);
+            lightRain.SetActive(true);
             Debug.Log("LightRainNow");//Check if the if statement work by call the message in console
         } else{
             lightRain.SetActive(false);

@@ -76,7 +76,7 @@ public class Cloud : MonoBehaviour
             over0cloud.SetActive(false);
             Debug.Log("NoCloudORLarger25");
         }
-        if (RainAmount == 0)
+        if (RainAmount > 0)
         {
             Debug.Log("IsRaining");
             targetMaterial1.color = new Color32(220, 220, 220, 255); //Change clouds color from white to grey
